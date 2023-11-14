@@ -9,7 +9,12 @@ const teacherSchema = new mongoose.Schema({
   },
   contact_info: {
     // Define the structure of contact information, such as email, phone, etc.
-    // Example: { email: String, phone: String, ... }
+    firstname: String,
+      lastname: String,
+      address: String,
+      email: String,
+      phone: String,
+      dob: Date,
   },
   subjects_taught: [{
     type: String,

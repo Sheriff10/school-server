@@ -1,7 +1,7 @@
 const winston = require("winston");
 
 const customMessageFormat = winston.format.printf(({ level, message }) => {
-   return `[Shool-Server]: ${message}`;
+   return `[School-Server]: ${message}`;
 });
 const loggerColor = winston.format.combine(
    winston.format.colorize({ all: true }),

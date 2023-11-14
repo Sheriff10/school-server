@@ -10,6 +10,7 @@ const classSchema = new mongoose.Schema({
     ref: 'Teacher',
     required: true,
   },
+  grade: String,
   class_schedule: [
     {
       day: {

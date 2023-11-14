@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['administrator', 'teacher', 'student', 'parent'],
+    enum: ['administrator', 'teacher', 'student', 'parent', "dev"],
     required: true,
   },
   permissions: {
