@@ -9,11 +9,11 @@ const studentSchema = new mongoose.Schema({
    },
    personal_info: {
       // Define the structure of personal information, such as name, address, etc.
-      firstname: String,
-      lastname: String,
-      address: String,
-      grade: String,
-      dob: Date,
+      firstname: {type: String, required: true},
+      lastname: {type: String, required: true},
+      address: {type: String, required: true},
+      grade: {type: String, required: true},
+      dob: {type: String, required: true},
    },
    academic_records: {
       // Define the structure of academic records, such as grades, GPA, etc.

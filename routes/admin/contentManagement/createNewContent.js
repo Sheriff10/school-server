@@ -4,7 +4,7 @@ const Content = require("../../../models/Content");
 
 const router = express.Router();
 
-router.get("/", adminAuth, async (req, res) => {
+router.post("/", adminAuth, async (req, res) => {
    const { type, title, description, link } = req.body;
    const newContent = new Content({
       type,

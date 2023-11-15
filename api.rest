@@ -1,0 +1,25 @@
+###
+POST http://localhost:5000/admin/auth HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "john_doe_123",
+    "password": "SecurePassword123!"
+}
+
+###
+POST http://localhost:5000/admin/create-student HTTP/1.1
+Content-Type: application/json
+dev-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
+
+{
+  "username": "john_doe_123",
+  "password": "SecurePassword123!",
+  "role": "student",
+  "firstname": "John",
+  "lastname": "Doe",
+  "address": "456 Oak Street",
+  "grade": "11",
+  "dob": "2002-03-20"
+}
+

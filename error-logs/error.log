@@ -3,3 +3,17 @@
 [Shool-Server]: [31mSchool Server Running (5000)[39m
 [School-Server]: [31mDatabase Connection Error: connect EHOSTUNREACH 0.0.105.137:27017 - Local (172.20.10.2:62956)[39m
 [School-Server]: [31mSome Error testing...[39m
+[School-Server]: [31mdata is not defined[39m
+[School-Server]: [31mdata is not defined[39m
+[School-Server]: [31msecretOrPrivateKey must have a value[39m
+[School-Server]: [31msecretOrPrivateKey must have a value[39m
+[School-Server]: [31minvalid expiresIn option for string payload[39m
+[School-Server]: [31minvalid expiresIn option for string payload[39m
+[School-Server]: [31mrole is not defined[39m
+[School-Server]: [31mUser validation failed: role: Path `role` is required.[39m
+[School-Server]: [31mUser validation failed: role: Path `role` is required.[39m
+[School-Server]: [31mE11000 duplicate key error collection: school.users index: username_1 dup key: { username: "dummy" }[39m
+[School-Server]: [31mCannot set headers after they are sent to the client[39m
+[School-Server]: [31mCannot set headers after they are sent to the client[39m
+[School-Server]: [31mCannot set headers after they are sent to the client[39m
+[School-Server]: [31mCannot set headers after they are sent to the client[39m
