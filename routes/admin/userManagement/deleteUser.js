@@ -1,17 +1,19 @@
 const express = require("express");
-const adminAuth = require("../../middleware/adminAuth");
-const Student = require("../../models/Student");
-const Teacher = require("../../models/Teachers");
-const User = require("../../models/User");
+const adminAuth = require("../../../middleware/adminAuth");
+const Student = require("../../../models/Student");
+const Teacher = require("../../../models/Teachers");
+const User = require("../../../models/User");
 
 const router = express.Router();
 
-router.post("/:id/:role", [adminAuth], async (req, res) => {
-   const { id, role } = req.params;
-   await User.findByIdAndDelete(id);
+router.post("/:role/:user_id", [adminAuth], async (req, res) => {
+   const { user_id, role } = req.params;
 
-   if (role === "teacher") await Teacher.findByIdAndDelete(id);
-   if (role === "student") await Student.findByIdAndDelete(id);
+   const user = User.findById(user_id);
+   if (!user) return res.status(404).send({ error: "User Not Found" });
+
+   if (role === "teacher") await Teacher.deleteOne({ user_id });
+   if (role === "student") await Student.deleteOne({ user_id });
 
    return res.status(200).send("User deleted");
    // gets id, find it and deletes it...

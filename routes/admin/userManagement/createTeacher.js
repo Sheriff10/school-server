@@ -18,33 +18,36 @@ router.post("/", [adminAuth], async (req, res) => {
       dob,
    } = req.body;
 
-   // New User
-   const newUser = new User({
-      username,
-      password,
-      role,
-   });
+   try {
+      // New User
+      const newUser = new User({
+         username,
+         password,
+         role,
+      });
 
-   // Save the user and wait for the result
-   const user = await newUser.save();
+      // Save the user and wait for the result
+      const user = await newUser.save();
 
-   const userId = user._id;
+      const userId = user._id;
 
-   const newTeacher = new Teacher({
-      user_id: userId,
-      personal_info: {
-         firstname,
-         lastname,
-         address,
-         email,
-         phone,
-         dob,
-      },
-   });
+      const newTeacher = new Teacher({
+         user_id: userId,
+         personal_info: {
+            firstname,
+            lastname,
+            address,
+            email,
+            phone,
+            dob,
+         },
+      });
 
-   // Save the Teacher and wait for the result
-   await newTeacher.save();
-
+      // Save the Teacher and wait for the result
+      await newTeacher.save();
+   } catch (error) {
+      res.status(400).send({ error: error.message });
+   }
    res.status(200).send({ message: "New Teacher created" });
 });
 

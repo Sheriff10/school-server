@@ -46,7 +46,6 @@ router.post("/", [adminAuth], async (req, res) => {
       // Save the student and wait for the result
       await newStudent.save();
    } catch (error) {
-      console.log(error);
       res.status(400).send({ error: error.message });
    }
 
