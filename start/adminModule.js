@@ -1,4 +1,4 @@
-const login = require("../routes/admin/Login.ts");
+const login = require("../routes/admin/Login");
 const newStudent = require("../routes/admin/userManagement/createStudent");
 const newAdmin = require("../routes/admin/userManagement/createNewAdmin");
 const newTeacher = require("../routes/admin/userManagement/createTeacher");

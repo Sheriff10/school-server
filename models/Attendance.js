@@ -3,7 +3,12 @@ const mongoose = require('mongoose');
 const attendanceSchema = new mongoose.Schema({
   class_id: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Class', // Reference to the Class Collection
+    ref: 'classes', // Reference to the Class Collection
+    required: true,
+  },
+  user_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'users', // Reference to the User Collection
     required: true,
   },
   date: {

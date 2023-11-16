@@ -6,14 +6,14 @@ const gradebookSchema = new mongoose.Schema({
     ref: 'Student',
     required: true,
   },
-  assignment_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Assignment',
-  },
-  quiz_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Quiz',
-  },
+  // assignment_id: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'Assignment',
+  // },
+  // quiz_id: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'Quiz',
+  // },
   exam_id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Exam',

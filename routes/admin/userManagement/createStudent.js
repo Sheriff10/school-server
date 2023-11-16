@@ -17,7 +17,7 @@ router.post("/", [adminAuth], async (req, res) => {
       grade,
       dob,
    } = req.body;
-   const hashedPassword = bcrypt.hashSync(password, 10);
+   const hashedPassword = await bcrypt.hash(password, 10);
 
    try {
       // New User

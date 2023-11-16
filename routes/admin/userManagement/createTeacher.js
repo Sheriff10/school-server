@@ -1,5 +1,6 @@
 const express = require("express");
 const adminAuth = require("../../../middleware/adminAuth");
+const bcrypt = require('bcrypt');
 const Teacher = require("../../../models/Teachers");
 const User = require("../../../models/User");
 
@@ -18,11 +19,14 @@ router.post("/", [adminAuth], async (req, res) => {
       dob,
    } = req.body;
 
+   const hashedPassword = await bcrypt.hash(password, 10);
+
+
    try {
       // New User
       const newUser = new User({
          username,
-         password,
+         password: hashedPassword,
          role,
       });
 
@@ -46,7 +50,7 @@ router.post("/", [adminAuth], async (req, res) => {
       // Save the Teacher and wait for the result
       await newTeacher.save();
    } catch (error) {
-      res.status(400).send({ error: error.message });
+     return res.status(400).send({ error: error.message });
    }
    res.status(200).send({ message: "New Teacher created" });
 });

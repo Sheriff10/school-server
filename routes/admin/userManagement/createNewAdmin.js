@@ -19,7 +19,7 @@ router.post("/", [adminAuth], async (req, res) => {
       // Save the user and wait for the result
       const user = await newUser.save();
    } catch (error) {
-      res.status(400).send({ error: error.message });
+      return res.status(400).send({ error: error.message });
    }
 
    res.status(200).send({ message: "New Teacher created" });
