@@ -12,7 +12,11 @@ router.post("/", adminAuth, async (req, res) => {
       description,
       link,
    });
-   await newContent.save();
+   try {
+      await newContent.save();
+   } catch (error) {
+      return res.status(400).send({ error: error.message });
+   }
 
    res.status(200).send({ message: "New content added" });
 });

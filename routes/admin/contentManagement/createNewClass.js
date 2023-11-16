@@ -4,16 +4,20 @@ const Class = require("../../../models/Class");
 
 const router = express.Router();
 
-router.get("/", adminAuth, async (req, res) => {
-   const { class_name, teacher_id, day, time, grade } = req.body;
-   const newClass = new Class({
-      class_name,
-      teacher_id,
-      grade,
-      class_schedule: [{ day, time }],
-   });
+router.post("/", adminAuth, async (req, res) => {
+   const { class_name, teacher_id, day, time, grade, class_schedule } = req.body;
+   try {
+      const newClass = new Class({
+         class_name,
+         teacher_id,
+         grade,
+         class_schedule,
+      });
 
-   await newClass.save();
+      await newClass.save();
+   } catch (error) {
+      return res.status(400).send({ error: error.message });
+   }
 
    res.status(200).send({ message: "New content added" });
 });

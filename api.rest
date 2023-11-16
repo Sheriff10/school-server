@@ -8,12 +8,12 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:5000/admin/create-student HTTP/1.1
+POST http://localhost:5000/admin/create-teacher HTTP/1.1
 Content-Type: application/json
 dev-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
 
 {
-  "username": "john_doe_123",
+  "username": "teacher_john_doe4",
   "password": "SecurePassword123!",
   "role": "student",
   "firstname": "John",
@@ -21,5 +21,40 @@ dev-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
   "address": "456 Oak Street",
   "grade": "11",
   "dob": "2002-03-20"
+}
+
+###
+POST http://localhost:5000/admin/update-user/data HTTP/1.1
+Content-Type: application/json
+dev-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
+
+{
+  "key": "personal_infos", "value": "Second Testing", "user_id": "6554eeb8217c4ad5c40761ec", "role": "student"
+}
+
+### 
+
+POST http://localhost:5000/admin/create-content HTTP/1.1
+Content-Type: application/json
+dev-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
+
+{
+  "type": "news",
+  "title": " Programming",
+  "description": "A beginner-friendly guide to programming concepts.",
+  "link": "https://example.com/intro-to-programming"
+}
+
+###
+POST http://localhost:5000/admin/update-calender HTTP/1.1
+Content-Type: application/json
+dev-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
+
+{
+  "id": "655567c82b145221351a361b",
+  "key": "descriptionddd",
+  "value": "Testing the description change",
+  "date": "2023-11-15",
+  "type": "academic event"
 }
 

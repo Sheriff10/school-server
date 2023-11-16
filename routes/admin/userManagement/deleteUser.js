@@ -12,6 +12,8 @@ router.post("/:role/:user_id", [adminAuth], async (req, res) => {
    const user = User.findById(user_id);
    if (!user) return res.status(404).send({ error: "User Not Found" });
 
+   // Delete user from User Collection and other collection.
+   await User.findByIdAndDelete(user_id);
    if (role === "teacher") await Teacher.deleteOne({ user_id });
    if (role === "student") await Student.deleteOne({ user_id });
 
