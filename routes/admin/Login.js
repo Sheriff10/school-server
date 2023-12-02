@@ -24,17 +24,21 @@ router.post("/", async (req, res) => {
    const generateToken = new Token();
 
    let token;
+   let user;
 
    switch (userRole) {
       case "teacher":
          token = generateToken.teacherToken(username);
+         user = "teacher"
          break;
       case "student":
          token = generateToken.studentToken(username);
+         user = "student"
          break;
       case "dev":
       case "administrator":
          token = generateToken.adminToken(username);
+         user = "administrator"
          break;
       default:
          break;
@@ -44,7 +48,7 @@ router.post("/", async (req, res) => {
 
    res.header(userToken, token);
    res.header("Access-Control-Expose-Headers", userToken);
-   res.send({ message: "Authenticated" });
+   res.send({ message: "Authenticated", user });
 });
 
 module.exports = router;

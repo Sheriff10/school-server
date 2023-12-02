@@ -6,20 +6,19 @@ const classSchema = new mongoose.Schema({
       required: true,
    },
    teacher_id: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Teacher",
+      // type: mongoose.Schema.Types.ObjectId,
+      // ref: "Teacher",
+      type: String,
       required: true,
    },
-   grade: String,
-   class_schedule: {
-      day: {
-         type: String,
-         required: true,
-      },
-      time: {
-         type: String,
-         required: true,
-      },
+   grade: { type: String, required: true },
+   class_begin: {
+      date: String,
+      time: String,
+   },
+   class_ends: {
+      date: String,
+      time: String,
    },
    class_roster: [
       {
@@ -27,6 +26,11 @@ const classSchema = new mongoose.Schema({
          ref: "students",
       },
    ],
+   class_status: {
+      type: String,
+      enum: ["completed", "ongoing", "pending", "canceled"],
+      default: "pending",
+   },
 });
 
 const Class = mongoose.model("Class", classSchema);

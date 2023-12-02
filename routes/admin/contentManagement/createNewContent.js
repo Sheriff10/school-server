@@ -6,11 +6,15 @@ const router = express.Router();
 
 router.post("/", adminAuth, async (req, res) => {
    const { type, title, description, link } = req.body;
+   const role = req.user.role
+   const user_id = req.user._id
    const newContent = new Content({
       type,
       title,
       description,
       link,
+      role,
+      user_id
    });
    try {
       await newContent.save();

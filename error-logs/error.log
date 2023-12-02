@@ -33,3 +33,30 @@
 [School-Server]: [31mCannot set headers after they are sent to the client[39m
 [School-Server]: [31mCast to ObjectId failed for value "655567c92b14522135dcc1a361f" (type string) at path "_id" for model "SchoolCalendarEvent"[39m
 [School-Server]: [31mCast to ObjectId failed for value "655567c92b14522135dcc1a361f" (type string) at path "_id" for model "SchoolCalendarEvent"[39m
+[School-Server]: [31mDatabase Connection Error: connection timed out[39m
+[School-Server]: [31mDatabase Connection Error: connection timed out[39m
+[School-Server]: [31mStudent.count is not a function[39m
+[School-Server]: [31mStudent.count is not a function[39m
+[School-Server]: [31mStudent.count is not a function[39m
+[School-Server]: [31mStudent.count is not a function[39m
+[School-Server]: [31mStudent.count is not a function[39m
+[School-Server]: [31m`Model.find()` cannot run without a model as `this`. Make sure you are not calling `new Model.find()`[39m
+[School-Server]: [31m`Model.find()` cannot run without a model as `this`. Make sure you are not calling `new Model.find()`[39m
+[School-Server]: [31mCannot set headers after they are sent to the client[39m
+[School-Server]: [31mCast to ObjectId failed for value "id" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCast to ObjectId failed for value "id" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCast to ObjectId failed for value "id" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCast to ObjectId failed for value "id" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCast to ObjectId failed for value "id" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCast to ObjectId failed for value "id" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCannot read properties of undefined (reading 'role')[39m
+[School-Server]: [31mCannot read properties of undefined (reading 'role')[39m
+[School-Server]: [31muser_id is not defined[39m
+[School-Server]: [31muser_id is not defined[39m
+[School-Server]: [31muser_id is not defined[39m
+[School-Server]: [31mCast to ObjectId failed for value "ilfdnj dfm" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCast to ObjectId failed for value "ilfdnj dfm" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCast to ObjectId failed for value "ilfdnj dfm" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCast to ObjectId failed for value "ilfdnj dfm" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mCast to ObjectId failed for value "ndjsfkfd" (type string) at path "_id" for model "Class"[39m
+[School-Server]: [31mCast to ObjectId failed for value "hbdsjk" (type string) at path "_id" for model "User"[39m

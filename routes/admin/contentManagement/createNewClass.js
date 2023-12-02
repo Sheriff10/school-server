@@ -5,14 +5,15 @@ const Class = require("../../../models/Class");
 const router = express.Router();
 
 router.post("/", adminAuth, async (req, res) => {
-   const { class_name, teacher_id, day, time, grade, class_schedule } = req.body;
+   const { class_name, teacher_id, grade, class_begin, class_ends } = req.body;
    try {
       const newClass = new Class({
          class_name,
          teacher_id,
          grade,
-         class_schedule,
-      });
+         class_begin,
+         class_ends,
+      });c
 
       await newClass.save();
    } catch (error) {

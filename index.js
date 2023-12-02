@@ -1,3 +1,4 @@
+const cors = require('cors');
 require("./start/db"); // db connection
 require("express-async-errors");
 
@@ -8,6 +9,7 @@ const adminRouteHandler = require("./start/adminModule");
 
 const app = express();
 
+app.use(cors())
 app.use(express.json());
 adminRouteHandler(app);
 

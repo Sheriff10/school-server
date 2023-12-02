@@ -2,22 +2,27 @@
 POST http://localhost:5000/admin/auth HTTP/1.1
 Content-Type: application/json
 
+# {
+#     "username": "teacher_john_doe",
+#     "password": "SecurePassword123!"
+# }
+
 {
-    "username": "john_doe_123",
-    "password": "SecurePassword123!"
+  "username": "dev",
+  "password": "admin"
 }
 
 ###
-POST http://localhost:5000/admin/create-teacher HTTP/1.1
+POST http://localhost:5000/admin/create-student HTTP/1.1
 Content-Type: application/json
-dev-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
+administrator-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
 
 {
-  "username": "teacher_john_doe4",
+  "username": "student_john_doe2",
   "password": "SecurePassword123!",
-  "role": "student",
-  "firstname": "John",
-  "lastname": "Doe",
+  "role": "teacher",
+  "firstname": "Johnathan",
+  "lastname": "Doe again",
   "address": "456 Oak Street",
   "grade": "11",
   "dob": "2002-03-20"
@@ -48,8 +53,7 @@ dev-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
 ###
 POST http://localhost:5000/admin/update-calender HTTP/1.1
 Content-Type: application/json
-dev-token: eyJhbGciOiJIUzI1NiJ9.ZGV2.nt3RbLmN5fz-qdkMuhpl9SpktlfaxwgJJkCdNbdAp9g
-
+teacher-token: eyJhbGciOiJIUzI1NiJ9.dGVhY2hlcl9qb2huX2RvZQ.TsbsPXQBQrAGTUsr5_J3QmjUHrSE3BKVt7YTaJWR2BU
 {
   "id": "655567c82b145221351a361b",
   "key": "descriptionddd",

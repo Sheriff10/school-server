@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
-const adminAuth = (req, res, next) => {
-   const token = req.header("dev-token"); // Assuming the token is in the headers
+const User = require("../models/User");
+const adminAuth = async (req, res, next) => {
+   const token = req.header("administrator-token"); // Assuming the token is in the headers
 
    if (!token) {
       return res.status(401).json({ error: "Token not provided" });
@@ -8,7 +9,8 @@ const adminAuth = (req, res, next) => {
 
    try {
       const decoded = jwt.verify(token, process.env.JWT_ADMIN_KEY);
-      req.student = decoded; // You can attach the decoded payload to the request for further use
+      console.log(decoded)
+      req.user = await User.findOne({username: decoded})
       next();
    } catch (err) {
       res.status(401).json({ error: "Invalid token" });
