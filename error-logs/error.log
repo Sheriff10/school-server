@@ -60,3 +60,21 @@
 [School-Server]: [31mCast to ObjectId failed for value "ilfdnj dfm" (type string) at path "_id" for model "User"[39m
 [School-Server]: [31mCast to ObjectId failed for value "ndjsfkfd" (type string) at path "_id" for model "Class"[39m
 [School-Server]: [31mCast to ObjectId failed for value "hbdsjk" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mreq.headers is not a function[39m
+[School-Server]: [31mgrade is not defined[39m
+[School-Server]: [31mCast to ObjectId failed for value "kjfndn" (type string) at path "_id" for model "User"[39m
+[School-Server]: [31mDatabase Connection Error: connection timed out[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m
+[School-Server]: [31mOperation `users.findOne()` buffering timed out after 10000ms[39m

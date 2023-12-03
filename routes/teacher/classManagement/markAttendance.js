@@ -31,7 +31,6 @@ router.post("/", [teacherAuth], async (req, res) => {
    const markAttendance = new Attendance({
       class_id,
       user_id,
-      date,
       status,
    });
    try {

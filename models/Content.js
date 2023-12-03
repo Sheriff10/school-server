@@ -23,6 +23,7 @@ const contentSchema = new mongoose.Schema({
       type: String,
       required: true,
    },
+   grade: String,
    link: {
       type: String,
    },
