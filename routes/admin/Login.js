@@ -13,6 +13,8 @@ router.post("/", async (req, res) => {
    const isUser = await User.findOne({ username });
    if (!isUser) return res.status(404).send({ message: "Invalid Credentials" }); // if user not found
 
+   console.log({username, password})
+
    // get hashed password compare it to req password
    const encryptedPassword = isUser.password;
    const isPasswordValid = await bcrypt.compare(password, encryptedPassword);

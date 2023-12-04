@@ -11,6 +11,7 @@ const contentSchema = new mongoose.Schema({
          "schedule",
          "assignment",
          "exam",
+         "message",
          "projects",
       ],
       required: true,

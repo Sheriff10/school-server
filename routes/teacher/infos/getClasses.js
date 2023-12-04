@@ -7,10 +7,11 @@ const router = express.Router();
 
 router.get("/", [teacherAuth], async (req, res) => {
    const { limit, status, id } = req.query;
-   const teacher_id = req.user.teacher_id;
+   const teacher_id = req.user._id;
+   console.log(teacher_id)
 
    if (id) {
-      const classId = await Class.findOne({ id, teacher_id });
+      const classId = await Class.findOne({ _id: id });
       return res.status(200).send({ classId });
    }
    if (status) {

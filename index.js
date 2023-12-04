@@ -7,6 +7,7 @@ const error = require("./middleware/error");
 const logger = require("./utils/logger");
 const adminRouteHandler = require("./start/adminModule");
 const teacherRouterHandler = require('./start/teacherModule');
+const studentRouterHandler = require('./start/studentModule');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(cors())
 app.use(express.json());
 adminRouteHandler(app);
 teacherRouterHandler(app);
+studentRouterHandler(app)
 
 app.get("/", (req, res) => {
    throw new Error("Some Error testing...");

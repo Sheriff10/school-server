@@ -13,7 +13,7 @@ router.post("/", adminAuth, async (req, res) => {
          grade,
          class_begin,
          class_ends,
-      });c
+      });
 
       await newClass.save();
    } catch (error) {
