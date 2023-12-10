@@ -4,6 +4,7 @@ const getAssignments = require('../routes/student/getAssignments')
 const getAnnouncements = require('../routes/student/getAnnouncements')
 const createNewContent = require('../routes/student/createNewContent')
 const getMessages = require('../routes/student/getMessages')
+const myGrade = require('../routes/student/myGrade')
 
 const studentRouterHandler = (app) => {
     app.use('/student/stats', stats)
@@ -12,6 +13,7 @@ const studentRouterHandler = (app) => {
     app.use('/student/get-announcement', getAnnouncements)
     app.use('/student/create-content', createNewContent)
     app.use('/student/get-messages', getMessages)
+    app.use('/student/get-grades', myGrade)
 }
 
 module.exports = studentRouterHandler

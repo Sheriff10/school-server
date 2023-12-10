@@ -1,31 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const gradebookSchema = new mongoose.Schema({
-  student_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Student',
-    required: true,
-  },
-  // assignment_id: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'Assignment',
-  // },
-  // quiz_id: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'Quiz',
-  // },
-  exam_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Exam',
-  },
-  grade: {
-    type: Number,
-    min: 0,
-    max: 100,
-    required: true,
-  },
+const GradeSchema = mongoose.Schema({
+   user_id: { type: mongoose.Schema.Types.ObjectId, required: true },
+   subject: { type: String, required: true },
+   grade: { type: String, required: true },
+   result: { type: String, required: true },
+   student_name: { type: String, required: true },
 });
 
-const Gradebook = mongoose.model('Gradebook', gradebookSchema);
+const Grade = mongoose.model("grade", GradeSchema);
 
-module.exports = Gradebook;
+module.exports = Grade;

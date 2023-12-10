@@ -21,7 +21,7 @@ router.get("/", studentAuth, async (req, res) => {
 
    
    // Announcement and Ongoing classes
-   const announcement = await Content.find({ type: "announcement" })
+   const announcement = await Content.find({ type: "announcement", recipient: "student" })
       .sort({ _id: -1 })
       .limit(limit);
    const ongoing_classes = await Class.find({ grade, class_status: "ongoing" });

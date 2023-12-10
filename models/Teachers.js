@@ -1,35 +1,41 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const teacherSchema = new mongoose.Schema({
-  user_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true,
-    unique: true,
-  },
-  contact_info: {
-    // Define the structure of contact information, such as email, phone, etc.
-    firstname: String,
-      lastname: String,
-      address: String,
-      email: String,
-      phone: String,
-      dob: Date,
-  },
-  subjects_taught: [{
-    type: String,
-    required: true,
-  }],
-  class_assignments: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Class',
-  }],
-  class_rosters: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Class',
-  }],
+   user_id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+      unique: true,
+   },
+   personal_info: {
+      // Define the structure of personal information, such as name, address, etc.
+      firstname: { type: String, required: true },
+      lastname: { type: String, required: true },
+      address: { type: String, required: true },
+      email: { type: String, required: true },
+      phone: { type: String, required: true },
+      dob: { type: String, required: true },
+   },
+   subjects_taught: [
+      {
+         type: String,
+         required: true,
+      },
+   ],
+   class_assignments: [
+      {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "Class",
+      },
+   ],
+   class_rosters: [
+      {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: "Class",
+      },
+   ],
 });
 
-const Teacher = mongoose.model('Teacher', teacherSchema);
+const Teacher = mongoose.model("Teacher", teacherSchema);
 
 module.exports = Teacher;

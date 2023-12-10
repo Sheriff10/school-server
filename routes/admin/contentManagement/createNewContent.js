@@ -5,7 +5,7 @@ const Content = require("../../../models/Content");
 const router = express.Router();
 
 router.post("/", adminAuth, async (req, res) => {
-   const { type, title, description, link } = req.body;
+   const { type, title, description, link, recipient } = req.body;
    const role = req.user.role
    const user_id = req.user._id
    const newContent = new Content({
@@ -14,6 +14,7 @@ router.post("/", adminAuth, async (req, res) => {
       description,
       link,
       role,
+      recipient,
       user_id
    });
    try {

@@ -32,6 +32,10 @@ const contentSchema = new mongoose.Schema({
       type: String,
       required: true,
    },
+   recipient: {
+      type: String,
+      enum: ["teacher", "student", "parent"],
+   },
    user_id: {
       type: String,
       required: true,
