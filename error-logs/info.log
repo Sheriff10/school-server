@@ -570,3 +570,11 @@
 [School-Server]: [36mSchool Server Running (5000)[39m
 [School-Server]: [36mSchool Server Running (5000)[39m
 [School-Server]: [36mSchool Server Running (5000)[39m
+[School-Server]: [36mSchool Server Running (5000)[39m
+[School-Server]: [36mSchool Server Running (5000)[39m
+[School-Server]: [31mCannot destructure property 'role' of 'req.user' as it is null.[39m
+[School-Server]: [31mCannot destructure property 'role' of 'req.user' as it is null.[39m
+[School-Server]: [36mSchool Server Running (5000)[39m
+[School-Server]: [31mCannot set headers after they are sent to the client[39m
+[School-Server]: [36mSchool Server Running (5000)[39m
+[School-Server]: [36mSchool Server Running (5000)[39m

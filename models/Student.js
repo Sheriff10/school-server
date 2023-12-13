@@ -11,6 +11,7 @@ const studentSchema = new mongoose.Schema({
       // Define the structure of personal information, such as name, address, etc.
       firstname: {type: String, required: true},
       lastname: {type: String, required: true},
+      parentEmail: {type: String, required: true},
       address: {type: String, required: true},
       grade: {type: String, required: true},
       dob: {type: String, required: true},
