@@ -24,7 +24,8 @@ teacherRouterHandler(app);
 studentRouterHandler(app);
 
 app.get("/", (req, res) => {
-   throw new Error("Some Error testing...");
+   // throw new Error("Some Error testing...");
+   res.status(200).send("Server Running Successfully")
 });
 
 app.use(error);
